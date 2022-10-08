@@ -1,17 +1,27 @@
+// Deposit Button Event 
+document.getElementById('deposit-btn').addEventListener('click', function () {
 
-// submit Button Event Listener add 
-document.getElementById('login-btn').addEventListener('click', function () {
+    // Get Deposit Amount 
+    const depositBtn = document.getElementById('user-deposit');
+    const previousDeposit = parseFloat(depositBtn.value);
 
-    // Get username 
-    const emailField = document.getElementById('user-email');
-    const userEmail = emailField.value;
+    // Show Deposit amount on Deposit part 
+    const depositTotal = document.getElementById('deposit');
+    const currentDeposit = parseFloat(depositTotal.innerText);
 
-    // Get password 
-    const passField = document.getElementById('user-pass');
-    const userPass = passField.value;
+    // set total Deposit 
+    const newDeposit = (currentDeposit + previousDeposit);
+    depositTotal.innerText = newDeposit;
 
-    // Check email and password 
-    if (userEmail == 'shuvo@gmail.com' && userPass == '12345') {
-        window.location.href = "bank.html";
-    }
+    // Show Balance amount on Balance Section  
+    const previousBalance = document.getElementById('balance');
+    const currentBalance = parseFloat(previousBalance.innerText);
+
+    // Set total Balance 
+    const newBalance = parseFloat(currentBalance + previousDeposit);
+    previousBalance.innerText = newBalance;
+
+
+    // Deposit Input field Null  
+    depositBtn.value = '';
 })

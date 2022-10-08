@@ -19,46 +19,68 @@
 
     <main>
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-3/4 mx-auto font-semibold ">
+
+            <!-- Total Deposit Show  -->
             <div class="bg-red-400 p-10 rounded">
                 <h4 class="text-4xl pl-7">Deposit</h4>
-                <h4 class="text-5xl pl-7">$0</h4>
+                <h4 class="text-5xl pl-7">$<span id="deposit">0</span> </h4>
             </div>
+
+            <!-- Total Withdraw Show  -->
             <div class="bg-green-400 p-10 rounded">
                 <h4 class="text-4xl pl-7 ">Withdraw</h4>
-                <h4 class="text-5xl pl-7">$0</h4>
+                <h4 class="text-5xl pl-7">$<span id="Withdraw">0</span></h4>
             </div>
+
+            <!-- Total Balance Show  -->
             <div class="bg-cyan-400 p-10 rounded">
                 <h4 class="text-4xl pl-7 ">Balance</h4>
-                <h4 class="text-5xl pl-7">$80,000</h4>
+                <h4 class="text-5xl pl-7">$<span id="balance">0</span></h4>
             </div>
         </section>
 
         <section class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-3/4 mx-auto font-semibold mt-20 ">
+
+            <!-- Deposite Part  -->
             <div class="bg-fuchsia-200 p-10 rounded">
                 <h4 class="text-4xl mb-6">Please Deposit</h4>
                 <div class="mb-6">
+
+                    <!-- Diposit Input Field  -->
                     <input type="number"
                         class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         id="user-deposit" placeholder="$ Amount you want to Deposit" />
                 </div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+
+                <!-- Submit Diposite Button   -->
+                <button id="deposit-btn"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                     Deposit
                 </button>
             </div>
+
+            <!-- Withdraw Part  -->
             <div class="bg-pink-200 p-10 rounded">
                 <h4 class="text-4xl mb-6">Please Withdraw</h4>
                 <div class="mb-6">
+
+                    <!-- Withdraw Input Field  -->
                     <input type="number"
                         class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         id="user-withdraw" placeholder="$ Amount you want to Withdraw" />
                 </div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+
+                <!-- Submit Withdraw Button   -->
+                <button id="withdraw-btn"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
                     Withdraw
                 </button>
             </div>
 
         </section>
     </main>
+
+    <script src="js/bank.js"></script>
 </body>
 
 </html>
