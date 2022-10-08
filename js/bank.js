@@ -2,8 +2,8 @@
 document.getElementById('deposit-btn').addEventListener('click', function () {
 
     // Get Deposit Amount 
-    const depositBtn = document.getElementById('user-deposit');
-    const previousDeposit = parseFloat(depositBtn.value);
+    const depositField = document.getElementById('user-deposit');
+    const previousDeposit = parseFloat(depositField.value);
 
     // Show Deposit amount on Deposit part 
     const depositTotal = document.getElementById('deposit');
@@ -12,6 +12,8 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     // set total Deposit 
     const newDeposit = (currentDeposit + previousDeposit);
     depositTotal.innerText = newDeposit;
+
+    // ....................................................................................... 
 
     // Show Balance amount on Balance Section  
     const previousBalance = document.getElementById('balance');
@@ -23,7 +25,7 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
 
     // Deposit Input field Null  
-    depositBtn.value = '';
+    depositField.value = '';
 });
 
 // Withdraw Button Event  
