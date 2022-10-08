@@ -24,6 +24,6 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
     // Deposit Input field Null  
     depositBtn.value = '';
-})
+});
 
 // Withdraw Button Event  
